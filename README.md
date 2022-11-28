@@ -3,7 +3,7 @@
 The project is based one of my first react apps, developed during the coding bootcamp course.
 I updated it to React 18, using functional components with hooks, also made some refactoring.
 
-[Play here!](moormie-black-jack-app.netlify.app)
+[Play here!](https://moormie-black-jack-app.netlify.app/)
 ## Rules
 
 - Dealer deals 2 cards to the players and two to himself (1 card face up, the other face down)
