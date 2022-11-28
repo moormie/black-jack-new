@@ -1,38 +1,112 @@
+body {
+  background: url("/public/images/back.png") repeat;
+  
+}
+
 .App {
+  margin: 50px auto;
   text-align: center;
+  color: whitesmoke;
+  font-family: 'Aldrich'
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  text-shadow: #ff2900 1px 0 10px;
+  font-size: 64px;
+  color: #ffbb00;
+  font-family: 'Audiowide'
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hand {
+  height: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.outcome {
+  margin: 0 auto 12px;
+  width: 36%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: rgb(217, 237, 247);
+  color: rgb(49, 112, 143);
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score {
+  display: inline-block;
+  width: 18%;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+button {
+  display: inline-block;
+  width: 12%;
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 5px;
+  font-family: 'Aldrich';
+  color: rgb(53, 53, 53)
+}
+
+#deal-button {
+  border-color: rgb(91, 192, 222);
+  background-color: rgb(90, 150, 180);
+}
+
+#deal-button:disabled, #stand-button:disabled, #hit-button:disabled, #restart-button:disabled {
+  background-color: rgb(144, 144, 144);
+  border-color: rgb(187, 187, 187);
+  color: rgb(218, 218, 218);
+  cursor: not-allowed;
+}
+
+#deal-button:hover:enabled {
+  background-color: rgb(84, 150, 180);
+  cursor: pointer;
+}
+
+#hit-button {
+  border-color: rgb(106, 205, 106);
+  background-color: rgb(60, 173, 60);
+}
+
+#hit-button:hover:enabled {
+  background-color: rgb(73, 145, 73);
+  color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+
+#stand-button {
+  border-color: rgb(217, 83, 79);
+  background-color: rgb(184, 50, 48);
+}
+
+#stand-button:hover:enabled {
+  background-color: rgb(138, 27, 25);
+  color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+
+#restart-button {
+  border-color: rgb(244, 246, 126);
+  background-color: rgb(241, 234, 27);
+}
+
+#restart-button:hover:enabled {
+  background-color: rgb(186, 180, 22);
+  cursor: pointer;
 }
