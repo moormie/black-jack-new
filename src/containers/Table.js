@@ -37,6 +37,16 @@ export const Table = () => {
         return count;
     };
 
+    const dealForComputer = (computerHand, deck) => {
+        let dealersCount = countScore(computerHand);
+        computerHand.shift();
+
+        while (dealersCount < 17) {
+            computerHand.push(deck.shift());
+            dealersCount = countScore(computerHand);
+        }
+    };
+
     const onClickDeal = () => {
         if (status === PLAYING) {
             const hitDeck = [...deck];
@@ -59,13 +69,7 @@ export const Table = () => {
             updatedPlayerHand.push(hitDeck.shift());
             const playersScore = countScore(updatedPlayerHand);
             if (playersScore === 21) {
-                let dealersCount = countScore(updatedComputerHand);
-                updatedComputerHand.shift();
-
-                while (dealersCount < 17) {
-                    updatedComputerHand.push(hitDeck.shift());
-                    dealersCount = countScore(updatedComputerHand);
-                }
+                dealForComputer(updatedComputerHand, hitDeck);
                 setStatus(DEALER);
             }
             setDeck(hitDeck);
@@ -82,13 +86,8 @@ export const Table = () => {
             const updatedComputerHand = [...computerHand];
             const updatedPlayerHand = [...playerHand];
 
-            let dealersCount = countScore(updatedComputerHand);
-            updatedComputerHand.shift();
+            dealForComputer(updatedComputerHand, hitDeck);
 
-            while (dealersCount < 17) {
-                updatedComputerHand.push(hitDeck.shift());
-                dealersCount = countScore(updatedComputerHand);
-            }
             setDeck(hitDeck);
             setComputerHand(updatedComputerHand);
             setPlayerHand(updatedPlayerHand);

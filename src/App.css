@@ -62,16 +62,16 @@ button {
   color: rgb(53, 53, 53)
 }
 
-#deal-button {
-  border-color: rgb(91, 192, 222);
-  background-color: rgb(90, 150, 180);
-}
-
 #deal-button:disabled, #stand-button:disabled, #hit-button:disabled, #restart-button:disabled {
   background-color: rgb(144, 144, 144);
   border-color: rgb(187, 187, 187);
   color: rgb(218, 218, 218);
   cursor: not-allowed;
+}
+
+#deal-button {
+  border-color: rgb(116, 212, 241);
+  background-color: rgb(78, 180, 231);
 }
 
 #deal-button:hover:enabled {
